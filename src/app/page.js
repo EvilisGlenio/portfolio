@@ -1,91 +1,159 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from './page.module.css'
+"use client";
 
-const inter = Inter({ subsets: ['latin'] })
+import {
+  Box,
+  Center,
+  Container,
+  Grid,
+  GridItem,
+  useColorMode,
+  Image,
+  Link,
+  Text,
+} from "@chakra-ui/react";
+import { Inter } from "next/font/google";
+import Header from "../pages/Header";
+import { FaLinkedinIn, FaGithub, FaTwitter, FaInstagram } from "react-icons/fa";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const { colorMode } = useColorMode();
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <>
+      <Header />
+      <Grid 
+        style={{ color: colorMode === "light" ? "dark" : "light"
+       }}
+        templateAreas={{
+          base: `"title"
+        "description"
+        "photo"
+        "footer"`,
+          md: `"title title"
+        "description photo"
+        "footer footer"`,
+        }}
+        gridTemplateRows={"auto"}
+        gridTemplateColumns={"auto"}
+        gap="1"
+        fontWeight="bold"
+      >
+        <GridItem pl="2" area={"title"}>
+          <Container
+            fontSize={{ base: "3rem", md: "4rem", lg: "6rem" }}
+            lineHeight={{ base: "3rem", md: "4rem", lg: "6rem" }}
+            padding="90px 0"
           >
-            By{' '}
+            <Text as="h1">
+              Desenvolvedor Front End apaixonado por tecnologia e motociclismo.
+            </Text>
+          </Container>
+          <Container maxW="2x1" justifyContent="flex-start">
+            <Box
+              marginBottom="20"
+              maxW="md"
+              display="flex"
+              fontSize={{ base: "1.4rem", md: "1.7rem" }}
+            >
+              <Link
+                href="https://www.linkedin.com/in/evilis-glenio/"
+                target="_blank"
+                marginRight="20px"
+                _hover={{
+                  color:
+                    colorMode === "light" ? "blackAlpha.300" : "whiteAlpha.300",
+                }}
+              >
+                <FaLinkedinIn />
+              </Link>
+              <Link
+                href="https://github.com/EvilisGlenio"
+                target="_blank"
+                marginRight="20px"
+                _hover={{
+                  color:
+                    colorMode === "light" ? "blackAlpha.300" : "whiteAlpha.300",
+                }}
+              >
+                <FaGithub />
+              </Link>
+              <Link
+                href="/"
+                target="_blank"
+                marginRight="20px"
+                _hover={{
+                  color:
+                    colorMode === "light" ? "blackAlpha.300" : "whiteAlpha.300",
+                }}
+              >
+                <FaTwitter />
+              </Link>
+              <Link
+                href="/"
+                target="_blank"
+                marginRight="20px"
+                _hover={{
+                  color:
+                    colorMode === "light" ? "blackAlpha.300" : "whiteAlpha.300",
+                }}
+              >
+                <FaInstagram />
+              </Link>
+            </Box>
+          </Container>
+        </GridItem>
+        <GridItem pl="2" area={"description"}>
+          <Text
+            paddingBottom="4rem"
+            fontSize={{ base: "1rem", md: "1.2rem" }}
+            fontWeight="light"
+            noOfLines={[1, 2, 3]}
+          >
+            Olá! Meu nome é Evilis e sou um estudante de Front End apaixonado
+            por tecnologia e motociclismo. Atualmente, estou aprendendo ReactJs,
+            NextJs e Chakra UI enquanto construo meu portfólio, com o objetivo
+            de conseguir minha primeira vaga de emprego como desenvolvedor Front
+            End Junior.
+          </Text>
+          <Text
+            paddingBottom="4rem"
+            fontSize={{ base: "1rem", md: "1.2rem" }}
+            fontWeight="light"
+            noOfLines={[1, 2, 3]}
+          >
+            Embora ainda enfrente alguns desafios, acredito que a prática é a
+            melhor forma de aprender e crescer na área. Quando não estou
+            programando, adoro viajar e explorar novos lugares, e também sou um
+            grande fã de rock'n'roll clássico e videogames.
+          </Text>
+          <Text
+            paddingBottom="4rem"
+            fontSize={{ base: "1rem", md: "1.2rem" }}
+            fontWeight="light"
+            noOfLines={[1, 2, 3]}
+          >
+            Espero poder compartilhar mais sobre mim e meu trabalho em breve!"
+          </Text>
+        </GridItem>
+        <GridItem pl="2" area={"photo"}>
+          <Box boxSize="md" w="98%">
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
+              borderRadius="20px"
+              boxSize="100%"
+              objectFit="cover"
+              src="https://img.freepik.com/fotos-premium/o-motociclista-bonito-e-elegante-esta-sentado-e-relaxando-em-sua-moto-ao-ar-livre_210435-12715.jpg?w=2000"
+              alt="Motociclista"
             />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-        </div>
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+          </Box>
+        </GridItem>
+        <GridItem pl="2" area={"footer"}>
+          <Center padding="8">
+            <Text fontWeight="light">© 2023 Evilis Glenio</Text>
+          </Center>
+        </GridItem>
+      </Grid>
+    </>
+  );
 }
