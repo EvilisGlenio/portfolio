@@ -20,7 +20,7 @@ import {
 } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
 import { HamburgerIcon } from "@chakra-ui/icons";
-import { HiOutlineCode } from "react-icons/hi";
+import { FaLaptopCode } from "react-icons/fa";
 import Link from "next/link";
 
 const Header = () => {
@@ -41,6 +41,7 @@ const Header = () => {
       position="sticky"
       top="0"
       left="0"
+      zIndex="999"
       style={{ background: colorMode === "light" ? "dark" : "light" }}
       backdropFilter="blur(8px)"
       opacity={scrollY > 0 ? 0.9 : 1}
@@ -49,7 +50,7 @@ const Header = () => {
         <GridItem>
           <Link href="./">
             <Text fontSize="1.5rem" display="flex" alignItems="center">
-              <HiOutlineCode /> Evilis Glenio
+              GlenioDev
             </Text>
           </Link>
         </GridItem>

@@ -1,23 +1,44 @@
 "use client";
 import Header from "../Header";
+import { useState } from "react";
 import {
-  Box,
   Center,
   Container,
   Grid,
   GridItem,
   useColorMode,
-  Image,
-  Flex,
   Text,
-  Heading,
-  Highlight,
 } from "@chakra-ui/react";
-import myImageGames from "/Users/Gilherme/git/EvilisGlenio/my-portifolio/public/myGames.jpg";
-import Link from "next/link";
+import Project from "../../Components/Projects";
 
 export default function About() {
   const { colorMode } = useColorMode();
+
+
+  const projetos = [
+    {
+      index: 1,
+      title: "NLW E-Sports",
+      imageUrl:
+        "https://github.com/maykbrito/nlw-esports-explorer/raw/main/.github/preview.png",
+      alt: "Imagem de uma página onde listo alguns de meus games preferidos.",
+    },
+    {
+      index: 2,
+      title: "Projeto 2",
+      imageUrl:
+        "https://imgs.search.brave.com/v2JClJ68zmt9x_Z9CPbOI9_gr9g9I9dUvdXky8msiTc/rs:fit:680:402:1/g:ce/aHR0cHM6Ly9maXZl/cnItcmVzLmNsb3Vk/aW5hcnkuY29tL2lt/YWdlcy90X21haW4x/LHFfYXV0byxmX2F1/dG8vZ2lncy85OTYw/NjMzMy9vcmlnaW5h/bC9iNWY3YWMwZDcy/ZmZkNDYzYzk2NWRl/OTE1MDZjZTlkNmZi/MDFlZDRjL2Rlc2ln/bi1hbi1hdHRyYWN0/aXZlLWFuZC1tb2Rl/cm4td2Vic2l0ZS5q/cGc",
+      alt: "Descrição do Projeto 2",
+    },
+    {
+      index: 3,
+      title: "Projeto 3",
+      imageUrl:
+        "https://github.com/maykbrito/nlw-esports-explorer/raw/main/.github/preview.png",
+      alt: "Descrição do Projeto 3",
+    },
+    // adicione quantos projetos quiser
+  ];
 
   return (
     <>
@@ -33,7 +54,7 @@ export default function About() {
         color="blackAlpha"
         fontWeight="bold"
       >
-        <GridItem pl="2" area={"title"} marginTop="28">
+        <GridItem pl="2" area={"title"} marginTop={{base: "0", md: "28"}}>
           <Container
             fontSize={{ base: "3rem", md: "4rem", lg: "6rem" }}
             lineHeight={{ base: "3rem", md: "4rem", lg: "6rem" }}
@@ -44,44 +65,20 @@ export default function About() {
             </Text>
           </Container>
         </GridItem>
-        <GridItem pl="2" area={"projects"}>
-          <Flex gap="2">
-            <Box p="2" w='100%'>
-              <Box h="330px">
-                <Image
-                  borderRadius="15px"
-                  src="https://github.com/maykbrito/nlw-esports-explorer/raw/main/.github/preview.png"
-                  alt="Imagem de uma página onde listo alguns de meus games preferidos."
-                  w="100%"
-                  h="100%"
-                  objectFit="cover"
-                  objectPosition='top'
-                />
-              </Box>
-            </Box>
-            <Box p="2" w='100%' display='flex' flexDirection='column' justifyContent='center'>
-              <Heading>NLW E-Sports</Heading>
-              <Text fontWeight='light' as="p" mt='10px'>
-                by <Link style={{fontWeight: "bold"}} href="/">Rocketseat</Link>
-              </Text>
-              <Text fontWeight='light' margin='20px 0' as="p">
-                Projeto construído do evento Next Level Week da Rocketseat. Nele
-                foram usadas as seguintes tecnologias: React. Esta página possui
-                alguns dos meus games preferidos, alguns streamers que acompanho
-                e minhas redes sociais.
-              </Text>
-              <Link href="/">Ver projeto</Link>
-            </Box>
-          </Flex>
-          <Flex minW="100%">
-            <Box></Box>
-            <Box></Box>
-          </Flex>
-          <Flex minW="100%">
-            <Box></Box>
-            <Box></Box>
-          </Flex>
+
+        <GridItem pl="2" area={"projects"} overflow="hidden">
+          {projetos.map(function (project) {
+            return (
+              <Project
+                index={project.index}
+                imageUrl={project.imageUrl}
+                alt={project.alt}
+                title={project.title}
+              />
+            );
+          })}
         </GridItem>
+
         <GridItem pl="2" area={"footer"}>
           <Center padding="8">
             <Text fontWeight="light">© 2023 Evilis Glenio</Text>
