@@ -1,6 +1,5 @@
-"use client";
+
 import Header from "../Header";
-import { useState } from "react";
 import {
   Center,
   Container,

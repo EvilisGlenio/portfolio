@@ -1,3 +1,4 @@
+import { useClient } from 'next-sanity';
 import {ChakraProvider} from '@chakra-ui/react'
 
 export const metadata = {
@@ -6,6 +7,9 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+  const client = useClient();
+  // wrap layout component in useClient
+  
   return (
     <html lang="en">
       <body>
