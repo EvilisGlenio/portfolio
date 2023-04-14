@@ -1,31 +1,29 @@
-"use client";
-
+import React from 'react';
 import {
-  Box,
-  Center,
-  Container,
-  Grid,
-  GridItem,
-  useColorMode,
-  Image,
-  Link,
-  Text,
-} from "@chakra-ui/react";
-import { Inter } from "next/font/google";
-import Header from "../pages/Header";
-import { FaLinkedinIn, FaGithub, FaTwitter, FaInstagram } from "react-icons/fa";
+    Box,
+    Center,
+    Container,
+    Grid,
+    GridItem,
+    useColorMode,
+    Image,
+    Link,
+    Text,
+  } from "@chakra-ui/react";
+  import { Inter } from "next/font/google";
+  import Header from "../Components/Header";
+  import { FaLinkedinIn, FaGithub, FaTwitter, FaInstagram } from "react-icons/fa";
 
-const inter = Inter({ subsets: ["latin"] });
+  const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
-  const { colorMode } = useColorMode();
+export default function HomePage({ data }) {
+    const { colorMode } = useColorMode();
 
   return (
     <>
       <Header />
-      <Grid 
-        style={{ color: colorMode === "light" ? "dark" : "light"
-       }}
+      <Grid
+        style={{ color: colorMode === "light" ? "dark" : "light" }}
         templateAreas={{
           base: `"title"
         "description"
@@ -156,4 +154,16 @@ export default function Home() {
       </Grid>
     </>
   );
+}
+
+export async function getStaticProps() {
+  // obter dados para a página inicial
+  const data = {
+    title: 'Título da Página Inicial',
+    description: 'Descrição da Página Inicial',
+  };
+
+  return {
+    props: { data },
+  };
 }
