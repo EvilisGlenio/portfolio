@@ -1,6 +1,6 @@
 "use client";
 
-import Header from "../Header";
+import Header from "../../Components/Header";
 import {
   Box,
   Center,
@@ -98,7 +98,7 @@ export default function About() {
               />
             </Box>
           </GridItem>
-          <GridItem  justifySelf='center'>
+          <GridItem  justifySelf='center' display={{base: "none", md: "none", lg: "grid"}}>
             <Box boxSize={{base: "sm", md: "md"}}>
               <Image
                 borderRadius="20px"
@@ -109,7 +109,7 @@ export default function About() {
               />
             </Box>
           </GridItem >
-          <GridItem  justifySelf='center'>
+          <GridItem  justifySelf='center' display={{base: "none", md: "none", lg: "grid"}}>
             <Box boxSize={{base: "sm", md: "md"}}>
               <Image
                 borderRadius="20px"
@@ -120,7 +120,7 @@ export default function About() {
               />
             </Box>
           </GridItem>
-          <GridItem  justifySelf='center'>
+          <GridItem  justifySelf='center' display={{base: "none", md: "grid"}}>
             <Box boxSize={{base: "sm", md: "md"}}>
               <Image
                 borderRadius="20px"
@@ -131,7 +131,7 @@ export default function About() {
               />
             </Box>
           </GridItem>
-          <GridItem  justifySelf='center'>
+          <GridItem  justifySelf='center' display={{base: "none", md: "grid"}}>
             <Box boxSize={{base: "sm", md: "md"}}>
               <Image
                 borderRadius="20px"
@@ -142,7 +142,7 @@ export default function About() {
               />
             </Box>
           </GridItem>
-          <GridItem  justifySelf='center'>
+          <GridItem  justifySelf='center' display={{base: "none", md: "grid"}}>
             <Box boxSize={{base: "sm", md: "md"}}>
               <Image
                 borderRadius="20px"

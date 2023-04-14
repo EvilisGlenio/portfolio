@@ -1,6 +1,6 @@
 "use client";
 
-import Header from "../Header";
+import Header from "../../Components/Header";
 import { useState } from "react";
 import {
   Center,
