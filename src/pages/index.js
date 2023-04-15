@@ -10,18 +10,14 @@ import {
     Link,
     Text,
   } from "@chakra-ui/react";
-  import { Inter } from "next/font/google";
-  import Header from "../Components/Header";
   import { FaLinkedinIn, FaGithub, FaTwitter, FaInstagram } from "react-icons/fa";
 
-  const inter = Inter({ subsets: ["latin"] });
 
 export default function HomePage({ data }) {
     const { colorMode } = useColorMode();
 
   return (
     <>
-      <Header />
       <Grid
         style={{ color: colorMode === "light" ? "dark" : "light" }}
         templateAreas={{

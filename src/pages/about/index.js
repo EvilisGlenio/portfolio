@@ -1,6 +1,5 @@
 "use client";
 
-import Header from "../../Components/Header";
 import {
   Box,
   Center,
@@ -19,7 +18,6 @@ export default function About() {
 
   return (
     <>
-      <Header />
       <Grid
         style={{ color: colorMode === "light" ? "dark" : "light" }}
         templateAreas={{base: `"title "
@@ -36,7 +34,7 @@ export default function About() {
         fontWeight="bold"
       >
         <GridItem pl="2" area={"title"} maxW='100%'>
-          <Container fontSize={{base: "3rem", md: "4rem", lg: "6rem"}} lineHeight={{base: "3rem", md: "4rem", lg: "6rem"}} padding="100px 0">
+          <Container fontSize={{base: "3rem", md: "4rem", lg: "6rem"}} lineHeight={{base: "3rem", md: "4rem", lg: "6rem"}} padding="90px 0">
             <Text as="h1">
               Conheça mais sobre mim: apaixonado por Desenvolvimento Front End e
               tecnologia.

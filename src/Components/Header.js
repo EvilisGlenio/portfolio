@@ -6,7 +6,6 @@ import {
   Grid,
   IconButton,
   useColorMode,
-  Switch,
   GridItem,
   Text,
   useDisclosure,
@@ -16,12 +15,11 @@ import {
   DrawerCloseButton,
   DrawerHeader,
   DrawerBody,
-  Flex,
 } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
 import { HamburgerIcon } from "@chakra-ui/icons";
-import { FaLaptopCode } from "react-icons/fa";
 import Link from "next/link";
+import ColorModeSwitcher from "../application/api/ColorModeSwitcher";
 
 const Header = () => {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -49,7 +47,11 @@ const Header = () => {
       <Grid templateColumns={{ base: "repeat(2, 1fr)", md: "repeat(3, 1fr)" }}>
         <GridItem>
           <Link href="./">
-            <Text fontSize="1.5rem" display="flex" alignItems="center">
+            <Text
+              fontSize="1.5rem"
+              display="flex"
+              alignItems="center"
+            >
               GlenioDev
             </Text>
           </Link>
@@ -59,45 +61,23 @@ const Header = () => {
           display={["none", "none", "flex", "flex"]}
         >
           <Link href="/about">
-            <Button
-              margin="0.5"
-              size="md"
-              variant="ghost"
-              _hover={{
-                bg: colorMode === "light" ? "blackAlpha.300" : "whiteAlpha.300",
-              }}
-            >
+            <Button margin="0.5" size="md" variant="ghost" color="current">
               About
             </Button>
           </Link>
           <Link Link href="/works">
-            <Button
-              margin="0.5"
-              size="md"
-              variant="ghost"
-              _hover={{
-                bg: colorMode === "light" ? "blackAlpha.300" : "whiteAlpha.300",
-              }}
-            >
+            <Button margin="0.5" size="md" variant="ghost" color="current">
               Works
             </Button>
           </Link>
           <Link Link href="/">
-            <Button
-              margin="0.5"
-              size="md"
-              variant="ghost"
-              _hover={{
-                bg: colorMode === "light" ? "blackAlpha.300" : "whiteAlpha.300",
-              }}
-            >
+            <Button margin="0.5" size="md" variant="ghost" color="current">
               Contact
             </Button>
           </Link>
         </GridItem>
         <GridItem justifySelf="end" alignSelf="center">
-          <Switch
-            color="gray.100"
+          <ColorModeSwitcher
             isChecked={isDark}
             onChange={toggleColorMode}
             display={["none", "none", "flex", "flex"]}
@@ -123,12 +103,7 @@ const Header = () => {
                       margin="0.5"
                       size="md"
                       variant="ghost"
-                      _hover={{
-                        bg:
-                          colorMode === "light"
-                            ? "blackAlpha.300"
-                            : "whiteAlpha.300",
-                      }}
+                      color="current"
                     >
                       About
                     </Button>
@@ -139,12 +114,7 @@ const Header = () => {
                       margin="0.5"
                       size="md"
                       variant="ghost"
-                      _hover={{
-                        bg:
-                          colorMode === "light"
-                            ? "blackAlpha.300"
-                            : "whiteAlpha.300",
-                      }}
+                      color="current"
                     >
                       Works
                     </Button>
@@ -155,22 +125,17 @@ const Header = () => {
                       margin="0.5"
                       size="md"
                       variant="ghost"
-                      _hover={{
-                        bg:
-                          colorMode === "light"
-                            ? "blackAlpha.300"
-                            : "whiteAlpha.300",
-                      }}
+                      color="current"
                     >
                       Contact
                     </Button>
                   </Link>
                 </Grid>
                 <Box position="absolute" bottom="8">
-                  <Switch
-                    color="gray.100"
+                  <ColorModeSwitcher
                     isChecked={isDark}
                     onChange={toggleColorMode}
+                    display={["flex", "flex", "none", "none"]}
                   />
                 </Box>
               </DrawerBody>

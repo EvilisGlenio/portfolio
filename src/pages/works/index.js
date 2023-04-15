@@ -1,6 +1,5 @@
 "use client";
 
-import Header from "../../Components/Header";
 import { useState } from "react";
 import {
   Center,
@@ -43,7 +42,6 @@ export default function About() {
 
   return (
     <>
-      <Header />
       <Grid
         style={{ color: colorMode === "light" ? "dark" : "light" }}
         templateAreas={`"title title"
@@ -55,11 +53,11 @@ export default function About() {
         color="blackAlpha"
         fontWeight="bold"
       >
-        <GridItem pl="2" area={"title"} marginTop={{base: "0", md: "28"}}>
+        <GridItem pl="2" area={"title"}>
           <Container
             fontSize={{ base: "3rem", md: "4rem", lg: "6rem" }}
             lineHeight={{ base: "3rem", md: "4rem", lg: "6rem" }}
-            padding="100px 0"
+            padding="90px 0"
           >
             <Text as="h1">
               Meus projetos e trabalhos desenvolvidos com amor e dedicação.
