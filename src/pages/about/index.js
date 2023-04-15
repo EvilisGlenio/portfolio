@@ -20,31 +20,38 @@ export default function About() {
     <>
       <Grid
         style={{ color: colorMode === "light" ? "dark" : "light" }}
-        templateAreas={{base: `"title "
+        templateAreas={{
+          base: `"title "
         "description  "
         "photo"
-        "footer "`, md: `"title title"
+        "footer "`,
+          md: `"title title"
         "description description"
         "photo photo"
-        "footer footer"`}}
+        "footer footer"`,
+        }}
         gridTemplateRows={"auto"}
         gridTemplateColumns={"auto"}
         gap="1"
         color="blackAlpha"
         fontWeight="bold"
       >
-        <GridItem pl="2" area={"title"} maxW='100%'>
-          <Container fontSize={{base: "3rem", md: "4rem", lg: "6rem"}} lineHeight={{base: "3rem", md: "4rem", lg: "6rem"}} padding="90px 0">
+        <GridItem pl="2" area={"title"} maxW="100%">
+          <Container
+            fontSize={{ base: "3rem", md: "4rem", lg: "6rem" }}
+            lineHeight={{ base: "3rem", md: "4rem", lg: "6rem" }}
+            padding="90px 0"
+          >
             <Text as="h1">
               Conheça mais sobre mim: apaixonado por Desenvolvimento Front End e
               tecnologia.
             </Text>
           </Container>
         </GridItem>
-        <GridItem pl="2" area={"description"} maxW='100%'>
+        <GridItem pl="2" area={"description"} maxW="100%">
           <Text
-            paddingBottom="4rem"
-            fontSize={{base: "1rem", md: "1.2rem"}}
+            paddingBottom={{ base: "2rem", md: "4rem" }}
+            fontSize={{ base: "1rem", md: "1.2rem" }}
             fontWeight="light"
           >
             Sou apaixonado por Desenvolvimento Front End e pelo impacto que a
@@ -56,8 +63,8 @@ export default function About() {
             últimas tendências e tecnologias.
           </Text>
           <Text
-            paddingBottom="4rem"
-            fontSize={{base: "1rem", md: "1.2rem"}}
+            paddingBottom={{ base: "2rem", md: "4rem" }}
+            fontSize={{ base: "1rem", md: "1.2rem" }}
             fontWeight="light"
           >
             Atualmente, estou estudando ReactJs, NextJs e Chakra UI, e estou
@@ -68,8 +75,8 @@ export default function About() {
             criar projetos incríveis.
           </Text>
           <Text
-            paddingBottom="4rem"
-            fontSize={{base: "1rem", md: "1.2rem"}}
+            paddingBottom={{ base: "2rem", md: "4rem" }}
+            fontSize={{ base: "1rem", md: "1.2rem" }}
             fontWeight="light"
           >
             Fora do trabalho, adoro viajar, andar de moto e ouvir rock. Acredito
@@ -80,13 +87,17 @@ export default function About() {
           </Text>
         </GridItem>
         <Grid
-          templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)", lg: "repeat(3, 1fr)" }}
-          gap={{base: "2", md: "1"}}
+          templateColumns={{
+            base: "repeat(1, 1fr)",
+            md: "repeat(2, 1fr)",
+            lg: "repeat(3, 1fr)",
+          }}
+          gap={{ base: "2", md: "1" }}
           area={"photo"}
           maxWidth="100%"
         >
-          <GridItem  justifySelf='center'>
-            <Box boxSize={{base: "sm", md: "md"}}>
+          <GridItem justifySelf="center">
+            <Box boxSize={{ base: "sm", md: "md" }}>
               <Image
                 borderRadius="20px"
                 boxSize="sm"
@@ -96,30 +107,11 @@ export default function About() {
               />
             </Box>
           </GridItem>
-          <GridItem  justifySelf='center' display={{base: "none", md: "none", lg: "grid"}}>
-            <Box boxSize={{base: "sm", md: "md"}}>
-              <Image
-                borderRadius="20px"
-                boxSize="sm"
-                objectFit="cover"
-                src="https://img.freepik.com/fotos-premium/o-motociclista-bonito-e-elegante-esta-sentado-e-relaxando-em-sua-moto-ao-ar-livre_210435-12715.jpg?w=2000"
-                alt="Motociclista"
-              />
-            </Box>
-          </GridItem >
-          <GridItem  justifySelf='center' display={{base: "none", md: "none", lg: "grid"}}>
-            <Box boxSize={{base: "sm", md: "md"}}>
-              <Image
-                borderRadius="20px"
-                boxSize="sm"
-                objectFit="cover"
-                src="https://img.freepik.com/fotos-premium/o-motociclista-bonito-e-elegante-esta-sentado-e-relaxando-em-sua-moto-ao-ar-livre_210435-12715.jpg?w=2000"
-                alt="Motociclista"
-              />
-            </Box>
-          </GridItem>
-          <GridItem  justifySelf='center' display={{base: "none", md: "grid"}}>
-            <Box boxSize={{base: "sm", md: "md"}}>
+          <GridItem
+            justifySelf="center"
+            display={{ base: "none", md: "none", lg: "grid" }}
+          >
+            <Box boxSize={{ base: "sm", md: "md" }}>
               <Image
                 borderRadius="20px"
                 boxSize="sm"
@@ -129,8 +121,11 @@ export default function About() {
               />
             </Box>
           </GridItem>
-          <GridItem  justifySelf='center' display={{base: "none", md: "grid"}}>
-            <Box boxSize={{base: "sm", md: "md"}}>
+          <GridItem
+            justifySelf="center"
+            display={{ base: "none", md: "none", lg: "grid" }}
+          >
+            <Box boxSize={{ base: "sm", md: "md" }}>
               <Image
                 borderRadius="20px"
                 boxSize="sm"
@@ -140,8 +135,30 @@ export default function About() {
               />
             </Box>
           </GridItem>
-          <GridItem  justifySelf='center' display={{base: "none", md: "grid"}}>
-            <Box boxSize={{base: "sm", md: "md"}}>
+          <GridItem justifySelf="center" display={{ base: "none", md: "grid" }}>
+            <Box boxSize={{ base: "sm", md: "md" }}>
+              <Image
+                borderRadius="20px"
+                boxSize="sm"
+                objectFit="cover"
+                src="https://img.freepik.com/fotos-premium/o-motociclista-bonito-e-elegante-esta-sentado-e-relaxando-em-sua-moto-ao-ar-livre_210435-12715.jpg?w=2000"
+                alt="Motociclista"
+              />
+            </Box>
+          </GridItem>
+          <GridItem justifySelf="center" display={{ base: "none", md: "grid" }}>
+            <Box boxSize={{ base: "sm", md: "md" }}>
+              <Image
+                borderRadius="20px"
+                boxSize="sm"
+                objectFit="cover"
+                src="https://img.freepik.com/fotos-premium/o-motociclista-bonito-e-elegante-esta-sentado-e-relaxando-em-sua-moto-ao-ar-livre_210435-12715.jpg?w=2000"
+                alt="Motociclista"
+              />
+            </Box>
+          </GridItem>
+          <GridItem justifySelf="center" display={{ base: "none", md: "grid" }}>
+            <Box boxSize={{ base: "sm", md: "md" }}>
               <Image
                 borderRadius="20px"
                 boxSize="sm"

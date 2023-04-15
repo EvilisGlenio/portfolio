@@ -27,7 +27,7 @@ export default function Project(props) {
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
       >
-        <Box h="330px">
+        <Box h={{base: "280px", md: "330px"}}>
           <Image
             borderRadius="15px"
             src={props.imageUrl}

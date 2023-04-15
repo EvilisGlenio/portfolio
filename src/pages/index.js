@@ -11,6 +11,7 @@ import {
     Text,
   } from "@chakra-ui/react";
   import { FaLinkedinIn, FaGithub, FaTwitter, FaInstagram } from "react-icons/fa";
+import { title } from 'process';
 
 
 export default function HomePage({ data }) {
@@ -41,7 +42,7 @@ export default function HomePage({ data }) {
             padding="90px 0"
           >
             <Text as="h1">
-              Desenvolvedor Front End apaixonado por tecnologia e motociclismo.
+              {data.title}
             </Text>
           </Container>
           <Container maxW="2x1" justifyContent="flex-start">
@@ -100,35 +101,25 @@ export default function HomePage({ data }) {
         </GridItem>
         <GridItem pl="2" area={"description"}>
           <Text
-            paddingBottom="4rem"
+            paddingBottom={{base: "2rem", md: "4rem"}}
             fontSize={{ base: "1rem", md: "1.2rem" }}
             fontWeight="light"
-            noOfLines={[1, 2, 3]}
           >
-            Olá! Meu nome é Evilis e sou um estudante de Front End apaixonado
-            por tecnologia e motociclismo. Atualmente, estou aprendendo ReactJs,
-            NextJs e Chakra UI enquanto construo meu portfólio, com o objetivo
-            de conseguir minha primeira vaga de emprego como desenvolvedor Front
-            End Junior.
+            {data.descriptionA}
           </Text>
           <Text
-            paddingBottom="4rem"
+            paddingBottom={{base: "2rem", md: "4rem"}}
             fontSize={{ base: "1rem", md: "1.2rem" }}
             fontWeight="light"
-            noOfLines={[1, 2, 3]}
           >
-            Embora ainda enfrente alguns desafios, acredito que a prática é a
-            melhor forma de aprender e crescer na área. Quando não estou
-            programando, adoro viajar e explorar novos lugares, e também sou um
-            grande fã de rock'n'roll clássico e videogames.
+            {data.descriptionB}
           </Text>
           <Text
-            paddingBottom="4rem"
+            paddingBottom={{base: "2rem", md: "4rem"}}
             fontSize={{ base: "1rem", md: "1.2rem" }}
             fontWeight="light"
-            noOfLines={[1, 2, 3]}
           >
-            Espero poder compartilhar mais sobre mim e meu trabalho em breve!"
+            {data.descriptionC}
           </Text>
         </GridItem>
         <GridItem pl="2" area={"photo"}>
@@ -155,8 +146,10 @@ export default function HomePage({ data }) {
 export async function getStaticProps() {
   // obter dados para a página inicial
   const data = {
-    title: 'Título da Página Inicial',
-    description: 'Descrição da Página Inicial',
+    title: 'Desenvolvedor Front End apaixonado por tecnologia e motociclismo.',
+    descriptionA: 'Olá! Meu nome é Evilis e sou um estudante de Front End apaixonado por tecnologia e motociclismo. Atualmente, estou aprendendo ReactJs, NextJs e Chakra UI enquanto construo meu portfólio, com o objetivo de conseguir minha primeira vaga de emprego como desenvolvedor Front End Junior.',
+    descriptionB: "Embora ainda enfrente alguns desafios, acredito que a prática é a melhor forma de aprender e crescer na área. Quando não estou programando, adoro viajar e explorar novos lugares, e também sou um grande fã de rock'n'roll clássico e videogames.",
+    descriptionC: 'Espero poder compartilhar mais sobre mim e meu trabalho em breve!'
   };
 
   return {

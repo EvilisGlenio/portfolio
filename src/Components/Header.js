@@ -19,6 +19,7 @@ import {
 import { useState, useEffect } from "react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import Link from "next/link";
+import ButtonHeader from "./ButtonHeader";
 import ColorModeSwitcher from "../application/api/ColorModeSwitcher";
 
 const Header = () => {
@@ -26,6 +27,21 @@ const Header = () => {
   const isDark = colorMode === "dark";
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [scrollY, setScrollY] = useState(0);
+
+  const buttonsHeader = [
+    {
+      href: "/about",
+      content: "About",
+    },
+    {
+      href: "/works",
+      content: "Works",
+    },
+    {
+      href: "/contact",
+      content: "Contact",
+    },
+  ];
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -47,11 +63,7 @@ const Header = () => {
       <Grid templateColumns={{ base: "repeat(2, 1fr)", md: "repeat(3, 1fr)" }}>
         <GridItem>
           <Link href="./">
-            <Text
-              fontSize="1.5rem"
-              display="flex"
-              alignItems="center"
-            >
+            <Text fontSize="1.5rem" display="flex" alignItems="center">
               GlenioDev
             </Text>
           </Link>
@@ -60,21 +72,9 @@ const Header = () => {
           placeSelf="flex-start"
           display={["none", "none", "flex", "flex"]}
         >
-          <Link href="/about">
-            <Button margin="0.5" size="md" variant="ghost" color="current">
-              About
-            </Button>
-          </Link>
-          <Link Link href="/works">
-            <Button margin="0.5" size="md" variant="ghost" color="current">
-              Works
-            </Button>
-          </Link>
-          <Link Link href="/">
-            <Button margin="0.5" size="md" variant="ghost" color="current">
-              Contact
-            </Button>
-          </Link>
+          {buttonsHeader.map(function (button) {
+            return <ButtonHeader href={button.href} content={button.content} />;
+          })}
         </GridItem>
         <GridItem justifySelf="end" alignSelf="center">
           <ColorModeSwitcher
@@ -97,39 +97,14 @@ const Header = () => {
               <DrawerHeader>Menu</DrawerHeader>
               <DrawerBody>
                 <Grid>
-                  <Link href="/about">
-                    <Button
-                      w="100%"
-                      margin="0.5"
-                      size="md"
-                      variant="ghost"
-                      color="current"
-                    >
-                      About
-                    </Button>
-                  </Link>
-                  <Link href="/works">
-                    <Button
-                      w="100%"
-                      margin="0.5"
-                      size="md"
-                      variant="ghost"
-                      color="current"
-                    >
-                      Works
-                    </Button>
-                  </Link>
-                  <Link href="/">
-                    <Button
-                      w="100%"
-                      margin="0.5"
-                      size="md"
-                      variant="ghost"
-                      color="current"
-                    >
-                      Contact
-                    </Button>
-                  </Link>
+                  {buttonsHeader.map(function (button) {
+                    return (
+                      <ButtonHeader
+                        href={button.href}
+                        content={button.content}
+                      />
+                    );
+                  })}
                 </Grid>
                 <Box position="absolute" bottom="8">
                   <ColorModeSwitcher
