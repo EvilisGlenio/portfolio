@@ -55,12 +55,9 @@ export default function Project(props) {
           </Link>
         </Text>
         <Text fontWeight="light" margin="20px 0" as="p">
-          Projeto construído do evento Next Level Week da Rocketseat. Nele foram
-          usadas as seguintes tecnologias: React. Esta página possui alguns dos
-          meus games preferidos, alguns streamers que acompanho e minhas redes
-          sociais.
+          {props.description}
         </Text>
-        <Link href="/">Ver projeto</Link>
+        <Link href={props.preview} target="_blank">Ver projeto</Link>
       </Box>
     </Flex>
   );
