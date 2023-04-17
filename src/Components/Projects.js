@@ -51,7 +51,7 @@ export default function Project(props) {
         <Text fontWeight="light" as="p" mt="10px">
           by{" "}
           <Link style={{ fontWeight: "bold" }} href="/">
-            Rocketseat
+            {props.author}
           </Link>
         </Text>
         <Text fontWeight="light" margin="20px 0" as="p">

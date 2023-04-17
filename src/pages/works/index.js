@@ -22,6 +22,8 @@ export default function About() {
       imageUrl:
         "https://github.com/maykbrito/nlw-esports-explorer/raw/main/.github/preview.png",
       alt: "Imagem de uma página onde listo alguns de meus games preferidos.",
+      author: "Rocketseat",
+
     },
     {
       index: 2,
@@ -73,6 +75,7 @@ export default function About() {
                 imageUrl={project.imageUrl}
                 alt={project.alt}
                 title={project.title}
+                author={project.author}
               />
             );
           })}

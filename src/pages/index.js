@@ -11,7 +11,6 @@ import {
     Text,
   } from "@chakra-ui/react";
   import { FaLinkedinIn, FaGithub, FaTwitter, FaInstagram } from "react-icons/fa";
-import { title } from 'process';
 
 
 export default function HomePage({ data }) {
