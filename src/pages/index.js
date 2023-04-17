@@ -74,7 +74,7 @@ export default function HomePage({ data }) {
                 <FaGithub />
               </Link>
               <Link
-                href="/"
+                href="https://twitter.com/EvilisGlenio"
                 target="_blank"
                 marginRight="20px"
                 _hover={{
@@ -85,7 +85,7 @@ export default function HomePage({ data }) {
                 <FaTwitter />
               </Link>
               <Link
-                href="/"
+                href="https://www.instagram.com/evilis.glenio/"
                 target="_blank"
                 marginRight="20px"
                 _hover={{
