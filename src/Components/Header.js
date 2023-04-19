@@ -82,7 +82,11 @@ const Header = () => {
           display={["none", "none", "flex", "flex"]}
         >
           {buttonsHeader.map(function (button) {
-            return <ButtonHeader href={button.href} content={button.content} />;
+            return (
+              <Link key={button.href} href={button.href} passHref>
+                <ButtonHeader href={button.href} content={button.content} />
+              </Link>
+            );
           })}
         </GridItem>
         <GridItem justifySelf="end" alignSelf="center">
@@ -108,7 +112,7 @@ const Header = () => {
                 <Grid>
                   {buttonsHeader.map(function (button) {
                     return (
-                      <Link  key={button.href} href={button.href} passHref>
+                      <Link key={button.href} href={button.href} passHref>
                         <ButtonHeader
                           onClose={onClose}
                           href={button.href}
