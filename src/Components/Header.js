@@ -18,6 +18,7 @@ import {
 import { useState, useEffect } from "react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import ButtonHeader from "./ButtonHeader";
 import ColorModeSwitcher from "../application/api/ColorModeSwitcher";
 
@@ -26,6 +27,7 @@ const Header = () => {
   const isDark = colorMode === "dark";
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [scrollY, setScrollY] = useState(0);
+  const router = useRouter();
 
   const buttonsHeader = [
     {
@@ -41,6 +43,14 @@ const Header = () => {
       content: "Contact",
     },
   ];
+
+  const handleClick = (href) => {
+    router.push(href);
+    onClose();
+  };
+  useEffect(() => {
+    onClose();
+  }, [onClose]);
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -98,10 +108,13 @@ const Header = () => {
                 <Grid>
                   {buttonsHeader.map(function (button) {
                     return (
-                      <ButtonHeader
-                        href={button.href}
-                        content={button.content}
-                      />
+                      <Link  key={button.href} href={button.href} passHref>
+                        <ButtonHeader
+                          onClose={onClose}
+                          href={button.href}
+                          content={button.content}
+                        />
+                      </Link>
                     );
                   })}
                 </Grid>
