@@ -33,14 +33,20 @@ const Header = () => {
     {
       href: "/about",
       content: "About",
+      target: ""
+
     },
     {
       href: "/works",
       content: "Works",
+      target: ""
+
+
     },
     {
-      href: "/contact",
+      href: "mailto:glenio.developer@gmail.com",
       content: "Contact",
+      target: "_blank"
     },
   ];
 
@@ -83,8 +89,8 @@ const Header = () => {
         >
           {buttonsHeader.map(function (button) {
             return (
-              <Link key={button.href} href={button.href} passHref>
-                <ButtonHeader href={button.href} content={button.content} />
+              <Link key={button.href} href={button.href} target={button.target} passHref>
+                <ButtonHeader href={button.href} content={button.content}  />
               </Link>
             );
           })}
@@ -112,7 +118,7 @@ const Header = () => {
                 <Grid>
                   {buttonsHeader.map(function (button) {
                     return (
-                      <Link key={button.href} href={button.href} passHref>
+                      <Link key={button.href} href={button.href} target={button.target} passHref>
                         <ButtonHeader
                           onClose={onClose}
                           href={button.href}
