@@ -120,7 +120,7 @@ export default function HomePage({ data }) {
           </Text>
         </GridItem>
         <GridItem pl="2" area={"photo"}>
-          <Box boxSize="md" w="100%">
+          <Box boxSize="md" w="98%">
             <Image
               borderRadius="20px"
               boxSize="100%"
