@@ -102,7 +102,7 @@ export default function About() {
                 borderRadius="20px"
                 boxSize="sm"
                 objectFit="cover"
-                src="https://img.freepik.com/fotos-premium/o-motociclista-bonito-e-elegante-esta-sentado-e-relaxando-em-sua-moto-ao-ar-livre_210435-12715.jpg?w=2000"
+                src="/image1.jpg"
                 alt="Motociclista"
               />
             </Box>
@@ -116,7 +116,7 @@ export default function About() {
                 borderRadius="20px"
                 boxSize="sm"
                 objectFit="cover"
-                src="https://img.freepik.com/fotos-premium/o-motociclista-bonito-e-elegante-esta-sentado-e-relaxando-em-sua-moto-ao-ar-livre_210435-12715.jpg?w=2000"
+                src="/image3.jpg"
                 alt="Motociclista"
               />
             </Box>
@@ -130,7 +130,7 @@ export default function About() {
                 borderRadius="20px"
                 boxSize="sm"
                 objectFit="cover"
-                src="https://img.freepik.com/fotos-premium/o-motociclista-bonito-e-elegante-esta-sentado-e-relaxando-em-sua-moto-ao-ar-livre_210435-12715.jpg?w=2000"
+                src="/image2.jpg"
                 alt="Motociclista"
               />
             </Box>
@@ -141,7 +141,7 @@ export default function About() {
                 borderRadius="20px"
                 boxSize="sm"
                 objectFit="cover"
-                src="https://img.freepik.com/fotos-premium/o-motociclista-bonito-e-elegante-esta-sentado-e-relaxando-em-sua-moto-ao-ar-livre_210435-12715.jpg?w=2000"
+                src="/image6.jpg"
                 alt="Motociclista"
               />
             </Box>
@@ -152,7 +152,7 @@ export default function About() {
                 borderRadius="20px"
                 boxSize="sm"
                 objectFit="cover"
-                src="https://img.freepik.com/fotos-premium/o-motociclista-bonito-e-elegante-esta-sentado-e-relaxando-em-sua-moto-ao-ar-livre_210435-12715.jpg?w=2000"
+                src="/image5.jpg"
                 alt="Motociclista"
               />
             </Box>
@@ -163,7 +163,7 @@ export default function About() {
                 borderRadius="20px"
                 boxSize="sm"
                 objectFit="cover"
-                src="https://img.freepik.com/fotos-premium/o-motociclista-bonito-e-elegante-esta-sentado-e-relaxando-em-sua-moto-ao-ar-livre_210435-12715.jpg?w=2000"
+                src="/image4.jpg"
                 alt="Motociclista"
               />
             </Box>

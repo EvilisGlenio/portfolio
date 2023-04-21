@@ -1,3 +1,5 @@
+// importação dos arquivos necessários (Fazer em inglês)
+
 import { useClient } from "next-sanity";
 import { ChakraProvider } from "@chakra-ui/react";
 

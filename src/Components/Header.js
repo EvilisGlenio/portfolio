@@ -32,20 +32,20 @@ const Header = () => {
   const buttonsHeader = [
     {
       href: "/about",
-      content: "About",
+      content: "Sobre",
       target: ""
 
     },
     {
       href: "/works",
-      content: "Works",
+      content: "Projetos",
       target: ""
 
 
     },
     {
       href: "mailto:glenio.developer@gmail.com",
-      content: "Contact",
+      content: "Contato",
       target: "_blank"
     },
   ];

@@ -1,20 +1,20 @@
-import React from 'react';
+import React from "react";
 import {
-    Box,
-    Center,
-    Container,
-    Grid,
-    GridItem,
-    useColorMode,
-    Image,
-    Link,
-    Text,
-  } from "@chakra-ui/react";
-  import { FaLinkedinIn, FaGithub, FaTwitter, FaInstagram } from "react-icons/fa";
-
+  Box,
+  Center,
+  Container,
+  Grid,
+  GridItem,
+  useColorMode,
+  Image,
+  Link,
+  Text,
+} from "@chakra-ui/react";
+import { FaLinkedinIn, FaGithub, FaTwitter, FaInstagram } from "react-icons/fa";
 
 export default function HomePage({ data }) {
-    const { colorMode } = useColorMode();
+  const { colorMode } = useColorMode();
+  
 
   return (
     <>
@@ -40,9 +40,7 @@ export default function HomePage({ data }) {
             lineHeight={{ base: "3rem", md: "4rem", lg: "6rem" }}
             padding="90px 0"
           >
-            <Text as="h1">
-              {data.title}
-            </Text>
+            <Text as="h1">{data.title}</Text>
           </Container>
           <Container maxW="2x1" justifyContent="flex-start">
             <Box
@@ -100,21 +98,21 @@ export default function HomePage({ data }) {
         </GridItem>
         <GridItem pl="2" area={"description"}>
           <Text
-            paddingBottom={{base: "2rem", md: "4rem"}}
+            paddingBottom={{ base: "2rem", md: "4rem" }}
             fontSize={{ base: "1rem", md: "1.2rem" }}
             fontWeight="light"
           >
             {data.descriptionA}
           </Text>
           <Text
-            paddingBottom={{base: "2rem", md: "4rem"}}
+            paddingBottom={{ base: "2rem", md: "4rem" }}
             fontSize={{ base: "1rem", md: "1.2rem" }}
             fontWeight="light"
           >
             {data.descriptionB}
           </Text>
           <Text
-            paddingBottom={{base: "2rem", md: "4rem"}}
+            paddingBottom={{ base: "2rem", md: "4rem" }}
             fontSize={{ base: "1rem", md: "1.2rem" }}
             fontWeight="light"
           >
@@ -122,13 +120,14 @@ export default function HomePage({ data }) {
           </Text>
         </GridItem>
         <GridItem pl="2" area={"photo"}>
-          <Box boxSize="md" w="98%">
+          <Box boxSize="md" w="100%">
             <Image
               borderRadius="20px"
               boxSize="100%"
               objectFit="cover"
-              src="https://img.freepik.com/fotos-premium/o-motociclista-bonito-e-elegante-esta-sentado-e-relaxando-em-sua-moto-ao-ar-livre_210435-12715.jpg?w=2000"
-              alt="Motociclista"
+              objectPosition="center 35%"
+              src={"/perfil.jpg"}
+              alt="Imagem de meu perfil"
             />
           </Box>
         </GridItem>
@@ -145,10 +144,13 @@ export default function HomePage({ data }) {
 export async function getStaticProps() {
   // obter dados para a página inicial
   const data = {
-    title: 'Desenvolvedor Front End apaixonado por tecnologia e motociclismo.',
-    descriptionA: 'Olá! Meu nome é Evilis e sou um estudante de Front End apaixonado por tecnologia e motociclismo. Atualmente, estou aprendendo ReactJs, NextJs e Chakra UI enquanto construo meu portfólio, com o objetivo de conseguir minha primeira vaga de emprego como desenvolvedor Front End Junior.',
-    descriptionB: "Embora ainda enfrente alguns desafios, acredito que a prática é a melhor forma de aprender e crescer na área. Quando não estou programando, adoro viajar e explorar novos lugares, e também sou um grande fã de rock'n'roll clássico e videogames.",
-    descriptionC: 'Espero poder compartilhar mais sobre mim e meu trabalho em breve!'
+    title: "Desenvolvedor Front End apaixonado por tecnologia e motociclismo.",
+    descriptionA:
+      "Olá! Meu nome é Evilis e sou um estudante de Front End apaixonado por tecnologia e motociclismo. Atualmente, estou aprendendo ReactJs, NextJs e Chakra UI enquanto construo meu portfólio, com o objetivo de conseguir minha primeira vaga de emprego como desenvolvedor Front End Junior.",
+    descriptionB:
+      "Embora ainda enfrente alguns desafios, acredito que a prática é a melhor forma de aprender e crescer na área. Quando não estou programando, adoro viajar e explorar novos lugares, e também sou um grande fã de rock'n'roll clássico e videogames.",
+    descriptionC:
+      "Espero poder compartilhar mais sobre mim e meu trabalho em breve!",
   };
 
   return {
