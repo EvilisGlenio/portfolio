@@ -128,7 +128,7 @@ const Header = () => {
                     );
                   })}
                 </Grid>
-                <Box position="absolute" bottom="8">
+                <Box position="absolute" bottom="5" right="4">
                   <ColorModeSwitcher
                     isChecked={isDark}
                     onChange={toggleColorMode}

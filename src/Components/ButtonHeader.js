@@ -17,6 +17,8 @@ export default function ButtonHeader(props) {
       variant="ghost"
       color="current"
       w={{ base: "100%" }}
+      display="flex"
+      justifyContent="left"
       onClick={() => props.onClose && props.onClose()}
     >
       {props.content}
