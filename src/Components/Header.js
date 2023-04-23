@@ -1,6 +1,7 @@
-"use client";
+"use client"; // Define o tipo de ambiente, client para o lado do cliente
 
-import {
+// Imports of the necessary packages
+import { 
   Box,
   Grid,
   IconButton,
@@ -22,13 +23,19 @@ import { useRouter } from "next/router";
 import ButtonHeader from "./ButtonHeader";
 import ColorModeSwitcher from "../application/api/ColorModeSwitcher";
 
-const Header = () => {
+const Header = () => { // Define o componente Header como uma função arrow
+  // Cria uma variável para o modo de cor e para a função que alterna entre os modos
   const { colorMode, toggleColorMode } = useColorMode();
+  // Define uma variável para verificar se o modo de cor atual é escuro
   const isDark = colorMode === "dark";
+  // Cria variáveis para controlar a abertura e fechamento de um drawer
   const { isOpen, onOpen, onClose } = useDisclosure();
+  // Cria uma variável para armazenar a posição vertical do scroll da página e define seu estado inicial como 0
   const [scrollY, setScrollY] = useState(0);
+  // Cria uma variável para utilizar o router do Next.js
   const router = useRouter();
 
+  // Cria um array de objetos para os botões do header, cada objeto contém um href, um conteúdo e um target
   const buttonsHeader = [
     {
       href: "/about",
@@ -50,16 +57,16 @@ const Header = () => {
     },
   ];
 
-  const handleClick = (href) => {
-    router.push(href);
-    onClose();
+  const handleClick = (href) => {// Cria uma função para lidar com o clique em um botão do header
+    router.push(href); // Navega para a página do href clicado
+    onClose(); // Fecha o drawer
   };
-  useEffect(() => {
+  useEffect(() => { // Cria um efeito para lidar com o fechamento do drawer quando a rota muda
     onClose();
   }, [onClose]);
 
-  useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
+  useEffect(() => { // Cria um efeito para atualizar a posição do scroll da página
+    const handleScroll = () => setScrollY(window.scrollY); // Cria uma função para lidar com a posição do scroll e atualiza a variável scrollY
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);

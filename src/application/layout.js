@@ -13,15 +13,18 @@ export default function RootLayout({ children }) {
   const client = useClient();
   // wrap layout component in useClient
 
+  // Return the application structure, using ChakraProvider for stylling
   return (
     <html lang="en">
       <head>
+        {/* Imports Montserrat Font from Google Fonts */}
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
         />
       </head>
       <body>
+        {/* Render the style provider of the Chakra UI with children components */}
         <ChakraProvider>{children}</ChakraProvider>
       </body>
     </html>

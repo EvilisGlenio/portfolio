@@ -1,24 +1,24 @@
-// Importação dos arquivos necessários
+// Imports of the necessary packages
 import { ChakraProvider } from "@chakra-ui/react";
 import { theme } from "../application/api/theme";
 import { ColorModeSwitcher } from '../application/api/ColorModeSwitcher'
 import Header from "../Components/Header";
 
-// Definição do componente MyApp que envolve toda a aplicação
+// Definition of the MyApp component that wraps the entire application
 function MyApp({ Component, pageProps }) {
   
-  // Retorna a estrutura da aplicação, utilizando o ChakraProvider como provedor de tema 
+  // Return the application structure, using ChakraProvider like as the theme provider
   return (
     <ChakraProvider theme={theme}>
-      {/* Cabeçalho da aplicação que contém o ColorModeSwitcher */}
+      {/* Application header that contains the ColorModeSwitcher */}
       <Header>
         <ColorModeSwitcher/>
       </Header>
-      {/* Renderiza o componente principal passando as props da página  */}
+      {/* Render main component passing the page props */}
       <Component {...pageProps} />
     </ChakraProvider>
   );
 }
 
-// Exporta o componente para que ele possa ser usado em outras partes da aplicação
+// Export the component so that it can be used in other parts of application
 export default MyApp;
