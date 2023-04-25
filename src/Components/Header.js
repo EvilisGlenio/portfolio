@@ -23,19 +23,19 @@ import { useRouter } from "next/router";
 import ButtonHeader from "./ButtonHeader";
 import ColorModeSwitcher from "../application/api/ColorModeSwitcher";
 
-const Header = () => { // Define o componente Header como uma função arrow
-  // Cria uma variável para o modo de cor e para a função que alterna entre os modos
+const Header = () => { // Set Header component as arrow function
+  // Create a variable for the color mode and for a function that toggles between modes
   const { colorMode, toggleColorMode } = useColorMode();
-  // Define uma variável para verificar se o modo de cor atual é escuro
+  // Set a variable for verify if the current color mode is dark
   const isDark = colorMode === "dark";
-  // Cria variáveis para controlar a abertura e fechamento de um drawer
+  // Criate variables to control the opening end closing of a drawer
   const { isOpen, onOpen, onClose } = useDisclosure();
-  // Cria uma variável para armazenar a posição vertical do scroll da página e define seu estado inicial como 0
+  // Create a variable for store a vertical scroll position of the page and set it's initial state as 0
   const [scrollY, setScrollY] = useState(0);
-  // Cria uma variável para utilizar o router do Next.js
+  // Create a variable to use the Next.js router
   const router = useRouter();
 
-  // Cria um array de objetos para os botões do header, cada objeto contém um href, um conteúdo e um target
+  // Create an array of the object for the header buttons, where each object contains an href, content and target
   const buttonsHeader = [
     {
       href: "/about",
@@ -57,21 +57,21 @@ const Header = () => { // Define o componente Header como uma função arrow
     },
   ];
 
-  const handleClick = (href) => {// Cria uma função para lidar com o clique em um botão do header
-    router.push(href); // Navega para a página do href clicado
-    onClose(); // Fecha o drawer
+  const handleClick = (href) => {// Criate a function to handle a click on a header button
+    router.push(href); // Navigate to the page od the clicked href
+    onClose(); // To close the drawer
   };
-  useEffect(() => { // Cria um efeito para lidar com o fechamento do drawer quando a rota muda
+  useEffect(() => { // Create an effect to handle closing the drawer when the route changes
     onClose();
   }, [onClose]);
 
-  useEffect(() => { // Cria um efeito para atualizar a posição do scroll da página
-    const handleScroll = () => setScrollY(window.scrollY); // Cria uma função para lidar com a posição do scroll e atualiza a variável scrollY
+  useEffect(() => { // Create an effect to update the scroll position of the page
+    const handleScroll = () => setScrollY(window.scrollY); // Create a function to handle the scroll position and update the scrollY variable
     window.addEventListener("scroll", handleScroll); // Adiciona um event listener para a rolagem da página e chama a função handleScroll
-    return () => window.removeEventListener("scroll", handleScroll); // Remove o event listener quando o componente é desmontado
+    return () => window.removeEventListener("scroll", handleScroll); // Remove the event listener when the component is unmounted
   }, []);
 
-  return ( // Retorna o JSX do componente
+  return ( // Return the JSX of the component
     <Box
       padding="1rem 0.3rem"
       position="sticky"
