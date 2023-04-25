@@ -67,11 +67,11 @@ const Header = () => { // Define o componente Header como uma função arrow
 
   useEffect(() => { // Cria um efeito para atualizar a posição do scroll da página
     const handleScroll = () => setScrollY(window.scrollY); // Cria uma função para lidar com a posição do scroll e atualiza a variável scrollY
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll); // Adiciona um event listener para a rolagem da página e chama a função handleScroll
+    return () => window.removeEventListener("scroll", handleScroll); // Remove o event listener quando o componente é desmontado
   }, []);
 
-  return (
+  return ( // Retorna o JSX do componente
     <Box
       padding="1rem 0.3rem"
       position="sticky"
@@ -151,4 +151,5 @@ const Header = () => { // Define o componente Header como uma função arrow
   );
 };
 
+// Export the component so that it can be used in other parts of application
 export default Header;
