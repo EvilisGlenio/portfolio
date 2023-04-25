@@ -19,7 +19,7 @@ export default function About() {
       index: 1,
       title: "NLW E-Sports",
       imageUrl:
-        "https://github.com/maykbrito/nlw-esports-explorer/raw/main/.github/preview.png",
+        "https://github.com/EvilisGlenio/nlw-eSports-app/raw/gh-pages/public/preview1.png",
       alt: "Imagem de uma página onde listo alguns de meus games preferidos.",
       author: "Rocketseat",
       description:
