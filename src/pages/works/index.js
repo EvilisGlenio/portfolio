@@ -17,14 +17,14 @@ export default function About() {
   const projetos = [
     {
       index: 1,
-      title: "NLW E-Sports",
+      title: "NLW SETUP",
       imageUrl:
         "https://github.com/EvilisGlenio/nlw-setup23/raw/main/.github/preview.jpg",
       alt: "Imagem de um gerenciador de Hábitos",
       author: "Rocketseat",
       description:
         "Projeto construído do evento Next Level Week da Rocketseat. Nele foram usadas as seguintes tecnologias: React. O Habits é um app para ajudar a criar novos hábitos.",
-        preview:"evilisglenio.github.io/nlw-setup23"
+        preview:"https://evilisglenio.github.io/nlw-setup23/"
     },
     {
       index: 2,
