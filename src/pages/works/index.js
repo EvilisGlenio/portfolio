@@ -19,12 +19,12 @@ export default function About() {
       index: 1,
       title: "NLW E-Sports",
       imageUrl:
-        "https://github.com/EvilisGlenio/nlw-eSports-app/raw/gh-pages/public/preview1.png",
-      alt: "Imagem de uma página onde listo alguns de meus games preferidos.",
+        "https://github.com/EvilisGlenio/nlw-setup23/raw/main/.github/preview.jpg",
+      alt: "Imagem de um gerenciador de Hábitos",
       author: "Rocketseat",
       description:
-        "Projeto construído do evento Next Level Week da Rocketseat. Nele foram usadas as seguintes tecnologias: React. Esta página possui alguns dos meus games preferidos, alguns streamers que acompanho e minhas redes sociais.",
-        preview:"https://evilisglenio.github.io/nlw-eSports-app/"
+        "Projeto construído do evento Next Level Week da Rocketseat. Nele foram usadas as seguintes tecnologias: React. O Habits é um app para ajudar a criar novos hábitos.",
+        preview:"evilisglenio.github.io/nlw-setup23"
     },
     {
       index: 2,
