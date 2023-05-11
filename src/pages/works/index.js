@@ -24,7 +24,7 @@ export default function About() {
       author: "Rocketseat",
       description:
         "Projeto construído do evento Next Level Week da Rocketseat. Nele foram usadas as seguintes tecnologias: React. O Habits é um app para ajudar a criar novos hábitos.",
-        preview:"https://evilisglenio.github.io/nlw-setup23/"
+      preview: "https://habbitsmenager.netlify.app/",
     },
     {
       index: 2,
@@ -33,20 +33,23 @@ export default function About() {
         "https://github.com/EvilisGlenio/Filter-Cards/raw/main/.github/preview.png",
       alt: "O Filter Cards é um aplicativo básico de busca de cartões.",
       author: "Rocketseat",
-      description: "Este é um projeto básico de manipulação de DOM, onde o objetivo é encontrar os cartões que possuem as informações escritas pelo usuário na barra de pesquisa. O modelo pode ser facilmente adaptado para diversos projetos.",
-      preview:"https://evilisglenio.github.io/Filter-Cards/"
+      description:
+        "Este é um projeto básico de manipulação de DOM, onde o objetivo é encontrar os cartões que possuem as informações escritas pelo usuário na barra de pesquisa. O modelo pode ser facilmente adaptado para diversos projetos.",
+      preview: "https://evilisglenio.github.io/Filter-Cards/",
     },
     {
       index: 3,
       title: "Player-Audio",
-      imageUrl: 'https://github.com/maykbrito/boracodar/raw/main/01/.github/preview.jpg',
+      imageUrl:
+        "https://github.com/maykbrito/boracodar/raw/main/01/.github/preview.jpg",
       alt: "",
       author: "Rocketseat",
-      description: "#boraCodar são desafios semanais, promovido pela Rocketseat para ensino de tecnologias WEB.",
-      preview:"https://evilisglenio.github.io/player-audio/"
+      description:
+        "#boraCodar são desafios semanais, promovido pela Rocketseat para ensino de tecnologias WEB.",
+      preview: "https://evilisglenio.github.io/player-audio/",
     },
     // adicione quantos projetos quiser
-  ];
+  ]
 
   return (
     <>
