@@ -57,7 +57,7 @@ export default function About() {
       author: "Evilis Glenio",
       description:
         "Este é um projeto inicialmente muito simples, onde irei aplicar meus conhecimentos mais recentes sobre Autenticações, consumo de APIs e React Hooks e o uso do Styled Components.",
-      preview: "rad-paletas-cd1ccd.netlify.app",
+      preview: "https://rad-paletas-cd1ccd.netlify.app/",
     },
     // adicione quantos projetos quiser
   ]
