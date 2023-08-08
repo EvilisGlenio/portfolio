@@ -1,6 +1,6 @@
-"use client";
+"use client"
 
-import { useState } from "react";
+import { useState } from "react"
 import {
   Center,
   Container,
@@ -8,11 +8,11 @@ import {
   GridItem,
   useColorMode,
   Text,
-} from "@chakra-ui/react";
-import Project from "../../Components/Projects";
+} from "@chakra-ui/react"
+import Project from "../../Components/Projects"
 
 export default function About() {
-  const { colorMode } = useColorMode();
+  const { colorMode } = useColorMode()
 
   const projetos = [
     {
@@ -47,6 +47,17 @@ export default function About() {
       description:
         "#boraCodar são desafios semanais, promovido pela Rocketseat para ensino de tecnologias WEB.",
       preview: "https://evilisglenio.github.io/player-audio/",
+    },
+    {
+      index: 4,
+      title: "Auth with Firebase",
+      imageUrl:
+        "https://github.com/EvilisGlenio/Auth-with-Firebase/raw/main/.github/preview.png",
+      alt: "",
+      author: "Evilis Glenio",
+      description:
+        "Este é um projeto inicialmente muito simples, onde irei aplicar meus conhecimentos mais recentes sobre Autenticações, consumo de APIs e React Hooks e o uso do Styled Components.",
+      preview: "rad-paletas-cd1ccd.netlify.app",
     },
     // adicione quantos projetos quiser
   ]
@@ -88,7 +99,7 @@ export default function About() {
                 description={project.description}
                 preview={project.preview}
               />
-            );
+            )
           })}
         </GridItem>
 
@@ -99,5 +110,5 @@ export default function About() {
         </GridItem>
       </Grid>
     </>
-  );
+  )
 }
