@@ -17,14 +17,14 @@ export default function About() {
   const projetos = [
     {
       index: 1,
-      title: "NLW SETUP",
+      title: "Stripe Store",
       imageUrl:
-        "https://github.com/EvilisGlenio/nlw-setup23/raw/main/.github/preview.jpg",
-      alt: "Imagem de um gerenciador de Hábitos",
-      author: "Rocketseat",
+        "https://github.com/EvilisGlenio/stripe-marketplace/blob/main/public/stripe-marketplace-preview.jpeg",
+      alt: "Imagem da Home do Marketplace",
+      author: "Evilis Glenio",
       description:
-        "Projeto construído do evento Next Level Week da Rocketseat. Nele foram usadas as seguintes tecnologias: React. O Habits é um app para ajudar a criar novos hábitos.",
-      preview: "https://habbitsmenager.netlify.app/",
+        "A Stripe Store é um projeto em construção, que oferecerá uma plataforma de compras online para eletrônicos. Desenvolvida usando tecnologias modernas como NextJs, Tailwind, Shadcn Ui, useShopCartAPI e StripePaymentsAPI.",
+      preview: "https://stripe-marketplace-one.vercel.app/",
     },
     {
       index: 2,
