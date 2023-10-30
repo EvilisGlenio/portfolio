@@ -19,7 +19,7 @@ export default function About() {
       index: 1,
       title: "Stripe Store",
       imageUrl:
-        "https://github.com/EvilisGlenio/stripe-marketplace/blob/main/public/stripe-marketplace-preview.jpeg",
+        "https://github.com/EvilisGlenio/stripe-marketplace/blob/main/.github/preview.jpeg",
       alt: "Imagem da Home do Marketplace",
       author: "Evilis Glenio",
       description:
